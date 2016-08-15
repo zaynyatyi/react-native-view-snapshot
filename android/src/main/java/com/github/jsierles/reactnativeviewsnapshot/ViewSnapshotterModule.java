@@ -36,7 +36,7 @@ public class ViewSnapshotterModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void takeSnapshot(int tag, ReadableMap options, Promise promise) {
+  public void saveSnapshotToPath(int tag, ReadableMap options, Promise promise) {
     ReactApplicationContext context = getReactApplicationContext();
     String filePath = options.hasKey("filePath") ? options.getString("filePath") : null;
     if (filePath == null) {
